@@ -28,19 +28,34 @@ poetry run streamlit run happiness-app.py
 ```
 
 ## Running the app on Docker
-### 1. Build the Docker image
+### Option 1: Build the Docker Image yourself
+#### 1. Build the Docker image
 Build the Docker image using the provided Dockerfile:
 ```setup
 docker build -t streamlit-happiness-app .
 ```
 
-### 2. Run the Docker container
+#### 2. Run the Docker container
 Run the app within a Docker container:
 ```setup
 docker run -p 8501:8501 streamlit-happiness-app
 ```
 
 After running the command, open your browser and go to http://localhost:8501 to view the app.
+
+### Option 2: Run the Pre-built Docker Image (Docker Hub)
+You can pull the pre-built image from Docker Hub
+#### 1. Pull the Docker Image from Docker Hub
+```setup
+docker pull elisebarattini/streamlit-happiness-app:latest
+```
+
+#### 2. Run the Docker Container
+```setup
+docker run -p 8501:8501 elisebarattini/streamlit-happiness-app
+```
+
+
 
 
 
